@@ -32,3 +32,17 @@ begin
 	INSERT INTO Address_Book(FirstName,LastName,Address,City,State,Zip,PhoneNumber,Email)
 	VALUES (@FirstName,@LastName,@Address,@City,@State,@Zip,@PhoneNumber,@Email)
 end
+
+CREATE PROCEDURE SpUpdateContactDetails
+(
+	@FirstName varchar(255),
+	@Address varchar(255),
+	@City varchar(255),
+	@Zip int
+	
+)
+as 
+begin
+	UPDATE Address_Book
+	SET Address=@Address, City=@City, zip=@zip WHERE FirstName=@FirstName
+end
