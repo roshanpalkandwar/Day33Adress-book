@@ -8,6 +8,7 @@
             Console.WriteLine("Choose a option");
 
             Console.WriteLine("1. Insert contact");
+            Console.WriteLine("2. Update contact");
             int option = Convert.ToInt32(Console.ReadLine());
 
             ContactModel contact = new ContactModel();
@@ -26,6 +27,15 @@
                     contact.Email = "Roshan@gmail.com";
 
                     insert.AddContact(contact);
+                    break;
+
+                case 2:
+                    EditContact edit = new EditContact();
+                    contact.FirstName = "vikas";
+                    contact.Address = "pune";
+                    contact.City = "pune";
+                    contact.Zip = 456661;
+                    edit.UpdateContact(contact);
                     break;
             }
         }
