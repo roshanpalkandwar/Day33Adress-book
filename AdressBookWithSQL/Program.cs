@@ -12,6 +12,7 @@
             Console.WriteLine("3. Delete contact");
             Console.WriteLine("4. Retrieve contact");
             Console.WriteLine("5. the size of address book by City and State");
+            Console.WriteLine("6. Retrieve enteries sorted alphabetically by Person’s name for a given city");
             int option = Convert.ToInt32(Console.ReadLine());
 
             ContactModel contact = new ContactModel();
@@ -52,6 +53,10 @@
                     AddressBookSize size = new AddressBookSize();
                     size.SizeOfAddressBookByCity();
                     size.SizeOfAddressBookByState();
+                    break;
+                case 6:
+                    RetrieveEntries entries = new RetrieveEntries();
+                    entries.SortedEntries();
                     break;
             }
         }
