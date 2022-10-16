@@ -9,6 +9,7 @@
 
             Console.WriteLine("1. Insert contact");
             Console.WriteLine("2. Update contact");
+            Console.WriteLine("3. Delete contact");
             int option = Convert.ToInt32(Console.ReadLine());
 
             ContactModel contact = new ContactModel();
@@ -36,6 +37,10 @@
                     contact.City = "pune";
                     contact.Zip = 456661;
                     edit.UpdateContact(contact);
+                    break;
+                case 3:
+                    DeleteContact delete = new DeleteContact();
+                    delete.DeleteContactDetails();
                     break;
             }
         }
