@@ -10,6 +10,7 @@
             Console.WriteLine("1. Insert contact");
             Console.WriteLine("2. Update contact");
             Console.WriteLine("3. Delete contact");
+            Console.WriteLine("4. Retrieve contact");
             int option = Convert.ToInt32(Console.ReadLine());
 
             ContactModel contact = new ContactModel();
@@ -41,6 +42,10 @@
                 case 3:
                     DeleteContact delete = new DeleteContact();
                     delete.DeleteContactDetails();
+                    break;
+                case 4:
+                    RetrievePerson retrieve = new RetrievePerson();
+                    retrieve.RetrievePersonDetails();
                     break;
             }
         }
